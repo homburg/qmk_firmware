@@ -1,6 +1,8 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
+// https://config.qmk.fm/#/test
+
 enum layers {
     BASE, // default layer
     SYMB, // symbols
@@ -20,7 +22,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox_pretty(
   // left hand
-  KC_GRV,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,              KC_6,         KC_7,    KC_8,    KC_9,    KC_0,              KC_NUHS,        KC_NUHS,
+  KC_GRV,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,              KC_6,         KC_7,    KC_8,    KC_9,    KC_0,              KC_MINS,        KC_EQL,
   KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    MO(SYMB),             MO(SYMB),     KC_Y,    KC_U,    KC_I,    KC_O,              KC_P,           KC_LBRC,
   KC_RCTRL,        KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,              KC_SCLN,        GUI_T(KC_QUOT),
   KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    KC_RGUI,              MEH_T(KC_NO),          KC_N,    KC_M,    KC_COMM, KC_DOT,   CTL_T(KC_SLSH), KC_RSFT,
